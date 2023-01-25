@@ -1,0 +1,20 @@
+.afficheList {
+  width: 20vw;
+  justify-content: center;
+  /* display: flex; */
+}
+
+.afficheAll {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100vw;
+}
+
+.borderDiv{
+  border: 1px solid;
+}
+
+img{
+  width: 50%;
+}

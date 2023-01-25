@@ -1,0 +1,10 @@
+<div class="afficheAll">
+  <div class="borderDiv" *ngFor="let poke of sendListFromPageToList">
+    <div class="afficheList">
+      <p>{{ poke.name }}</p>
+      <img [src]="poke.img" alt="" />
+      <button (click)="selectedPokemon(poke)">Envoyer</button>
+      <!-- <p>{{ poke.description }}</p> -->
+    </div>
+  </div>
+</div>

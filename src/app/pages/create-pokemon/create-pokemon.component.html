@@ -1,0 +1,56 @@
+<p [routerLink]="''">Home</p>
+
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <label for="name-pokemon">name</label>
+    <input
+      id="name-pokemon"
+      name="name-pokemon"
+      type="text"
+      [(ngModel)]="create.name"
+      #name="ngModel"
+      required
+    />
+  </fieldset>
+
+  <!-- Message d'erreurs de name -->
+  <div *ngIf="name.errors">
+    <span *ngIf="name.errors['required']">Le champ email est requis</span>
+  </div>
+
+  <fieldset>
+    <label for="img-pokemon">URL img</label>
+    <input
+      id="img-pokemon"
+      name="img-pokemon"
+      type="text"
+      [(ngModel)]="create.img"
+      #img="ngModel"
+      required
+    />
+  </fieldset>
+
+  <!-- Message d'erreurs de img -->
+  <div *ngIf="img.errors">
+    <span *ngIf="img.errors['required']">L'URL est requise'</span>
+  </div>
+
+  <fieldset>
+    <label for="descrition-pokemon">Descrition</label>
+    <input
+      id="descrition-pokemon"
+      name="descrition-pokemon"
+      type="text"
+      [(ngModel)]="create.description"
+      #descrition="ngModel"
+      required
+    />
+  </fieldset>
+
+  <!-- Message d'erreurs de description -->
+  <div *ngIf="descrition.errors">
+    <span *ngIf="descrition.errors['required']">La descrition est requise'</span>
+  </div>
+
+  <button type="submit">Sauvegarder</button>
+</form>

@@ -1,0 +1,8 @@
+<h1>Pokedex</h1>
+<p [routerLink]="'create'">Create Page</p>
+
+<app-pokemon-list
+  [sendListFromPageToList]="pokemonList"
+  (sendSelectedPokemonFromListToDetail)="receiveDetailsFromList($event)"
+></app-pokemon-list>
+<app-pokemon-detail [pokemonReceive]="pokemonDetail"></app-pokemon-detail>
